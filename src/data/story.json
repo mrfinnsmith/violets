@@ -1,0 +1,207 @@
+{
+  "start": {
+    "id": "start",
+    "text": "The morning fog rolls across Golden Gate Park as you arrive at the Flower Piano installation. As a member of the Golden State Valkyries' secret detective unit, you've been called to investigate a shocking crime: someone has stolen the grand piano from the center of the flower garden!\n\nYou are Detective Veronica Burton, and your partners Detective Laeticia Amihere and Detective Carla Leite are already examining the scene. The A.C.E.S. (Anti-California Evil Society) has left their calling card - a black envelope with their twisted logo.",
+    "choices": [
+      {
+        "text": "Examine the crime scene for clues",
+        "nextNodeId": "examine_scene"
+      },
+      {
+        "text": "Interview the park groundskeeper who discovered the theft",
+        "nextNodeId": "interview_groundskeeper"
+      },
+      {
+        "text": "Check the A.C.E.S. calling card for hidden messages",
+        "nextNodeId": "examine_card"
+      }
+    ]
+  },
+  "examine_scene": {
+    "id": "examine_scene",
+    "text": "You kneel down where the piano once stood. The ground shows deep impressions from the piano legs, and there are fresh tire tracks leading toward the park's service road. Laeticia points to some scattered sheet music caught in nearby bushes.\n\n\"Look at this, Veronica,\" she says, holding up a page. \"This isn't just any music - it's 'California Dreamin'' with strange annotations in the margins.\"",
+    "choices": [
+      {
+        "text": "Follow the tire tracks to the service road",
+        "nextNodeId": "follow_tracks"
+      },
+      {
+        "text": "Analyze the annotated sheet music",
+        "nextNodeId": "analyze_music"
+      },
+      {
+        "text": "Search for more evidence in the flower beds",
+        "nextNodeId": "search_flowers"
+      }
+    ]
+  },
+  "interview_groundskeeper": {
+    "id": "interview_groundskeeper",
+    "text": "The groundskeeper, Miguel Santos, is visibly shaken. \"I came in at 6 AM like always,\" he explains nervously. \"The piano was just... gone! But I did see something strange last night when I was leaving. There was a van parked by the service entrance with some kind of musical note logo on the side.\"\n\nCarla takes notes as Miguel continues, \"And there were these people in black hoodies. One of them was humming something, but it sounded... wrong. Like they were humming a California song backwards.\"",
+    "choices": [
+      {
+        "text": "Ask about the van's license plate or other details",
+        "nextNodeId": "van_details"
+      },
+      {
+        "text": "Investigate the service entrance area",
+        "nextNodeId": "service_entrance"
+      },
+      {
+        "text": "Ask Miguel to hum what he heard",
+        "nextNodeId": "backwards_song"
+      }
+    ]
+  },
+  "examine_card": {
+    "id": "examine_card",
+    "text": "The A.C.E.S. calling card is made of thick black paper with their logo - a twisted version of the California bear, but with red eyes and musical notes for claws. On the back, there's a message written in what appears to be invisible ink that only shows up when you hold it up to the light.\n\nThe message reads: \"The Golden State's melodies will be silenced. Find us where the city's heartbeat meets the bay, but only when the fog lifts at the thirteenth hour.\"",
+    "choices": [
+      {
+        "text": "Research locations where 'the city's heartbeat meets the bay'",
+        "nextNodeId": "research_location"
+      },
+      {
+        "text": "Figure out what 'the thirteenth hour' means",
+        "nextNodeId": "thirteenth_hour"
+      },
+      {
+        "text": "Test the card for fingerprints or other forensic evidence",
+        "nextNodeId": "forensic_analysis"
+      }
+    ]
+  },
+  "follow_tracks": {
+    "id": "follow_tracks",
+    "text": "The tire tracks lead to a parking area near the park's service road. You notice the tracks are unusually wide - definitely from a large truck or van. Carla kneels down and points to something glinting in the gravel.\n\n\"Piano wire,\" she announces, holding up a broken strand. \"And look at this oil stain - it's fresh. Whatever vehicle they used was leaking oil, which means we might be able to track it.\"",
+    "choices": [
+      {
+        "text": "Follow the oil trail out of the park",
+        "nextNodeId": "oil_trail"
+      },
+      {
+        "text": "Take photos and call for a forensic team",
+        "nextNodeId": "call_forensics"
+      }
+    ]
+  },
+  "analyze_music": {
+    "id": "analyze_music",
+    "text": "Laeticia spreads out the sheet music on a nearby bench. The annotations are in red ink and appear to be coordinate numbers, but they're disguised as musical notations. You recognize the pattern - it's a code the A.C.E.S. has used before.\n\n\"These aren't random,\" you realize. \"They're GPS coordinates, but encoded. If I'm reading this right, they point to somewhere near the waterfront.\"",
+    "choices": [
+      {
+        "text": "Decode the coordinates and head to the location",
+        "nextNodeId": "waterfront_location"
+      },
+      {
+        "text": "Look for more coded sheet music in the area",
+        "nextNodeId": "more_music"
+      }
+    ]
+  },
+  "search_flowers": {
+    "id": "search_flowers",
+    "text": "Searching through the colorful flower beds, you find something unexpected - a small digital recording device hidden among the marigolds. When you play it back, you hear the sound of the piano being moved, along with voices:\n\n\"Careful with that corner! The boss wants this delivered to the warehouse by midnight.\"\n\"Which warehouse?\"\n\"The old one by Pier 39. Where we stored those 'borrowed' Golden Gate Bridge cables last month.\"",
+    "choices": [
+      {
+        "text": "Head immediately to Pier 39 to investigate",
+        "nextNodeId": "pier_39"
+      },
+      {
+        "text": "Research the warehouse and plan a careful approach",
+        "nextNodeId": "research_warehouse"
+      }
+    ]
+  },
+  "waterfront_location": {
+    "id": "waterfront_location",
+    "text": "The decoded coordinates lead you to an abandoned warehouse near Pier 39. Through a grimy window, you can see the stolen grand piano in the center of a large room, surrounded by A.C.E.S. members in their signature black hoodies. They appear to be preparing for some kind of ceremony.\n\nYou count at least six suspects, and notice they've set up speakers around the piano. A banner reads: 'OPERATION SILENT CALIFORNIA - Phase 1 Complete.'",
+    "choices": [
+      {
+        "text": "Call for backup and plan a coordinated raid",
+        "nextNodeId": "call_backup"
+      },
+      {
+        "text": "Try to sneak in and gather more intelligence",
+        "nextNodeId": "sneak_inside"
+      }
+    ]
+  },
+  "pier_39": {
+    "id": "pier_39",
+    "text": "Arriving at the warehouse district near Pier 39, you spot the stolen piano through a window of a large building. The A.C.E.S. members are clearly preparing for something big - they've connected the piano to electronic equipment and have speakers set up around it.\n\nJust then, your phone buzzes with a text from an unknown number: 'Stop interfering with our California Silence Project, or the piano becomes the first of many cultural treasures to disappear forever.'",
+    "choices": [
+      {
+        "text": "Coordinate with your team to surround the building",
+        "nextNodeId": "surround_building"
+      },
+      {
+        "text": "Try to negotiate with A.C.E.S. to understand their plan",
+        "nextNodeId": "negotiate"
+      }
+    ]
+  },
+  "call_backup": {
+    "id": "call_backup",
+    "text": "Within minutes, backup arrives - including several other members of the Valkyries' secret detective unit. Together, you coordinate a simultaneous entry from multiple points. The A.C.E.S. members are caught completely off-guard.\n\n'You'll never stop our mission!' shouts their leader as Carla places him in handcuffs. 'California's cultural identity must be destroyed!' But it's too late - you've recovered the piano and arrested the entire cell.",
+    "choices": [
+      {
+        "text": "Interrogate the A.C.E.S. leader about future plans",
+        "nextNodeId": "interrogate_leader"
+      },
+      {
+        "text": "Examine their equipment to understand their 'Silence Project'",
+        "nextNodeId": "examine_equipment"
+      }
+    ]
+  },
+  "surround_building": {
+    "id": "surround_building",
+    "text": "Your team executes a perfect coordinated assault. Laeticia and Carla take the back entrance while you and backup officers enter from the front. The A.C.E.S. members surrender quickly when they realize they're outnumbered.\n\nAs you secure the scene, you discover their plan was even more sinister than you thought - they were planning to use the piano in a public 'anti-California' concert to demoralize the state's residents.",
+    "choices": [
+      {
+        "text": "Search for evidence of other planned thefts",
+        "nextNodeId": "search_evidence"
+      },
+      {
+        "text": "Focus on safely returning the piano to Golden Gate Park",
+        "nextNodeId": "return_piano"
+      }
+    ]
+  },
+  "interrogate_leader": {
+    "id": "interrogate_leader",
+    "text": "In the interrogation room, the A.C.E.S. leader reveals their twisted plan: 'We were going to steal iconic California symbols one by one, starting with the piano, then the Golden Gate Bridge cables, even Hollywood sign letters. Our goal is to demoralize Californians and make them lose their state pride.'\n\nYou've not only solved this case but uncovered a much larger conspiracy. The Valkyries' detective unit will need to stay vigilant to protect California's cultural treasures.",
+    "choices": [
+      {
+        "text": "Set up a task force to monitor A.C.E.S. activities statewide",
+        "nextNodeId": "victory_taskforce"
+      }
+    ]
+  },
+  "search_evidence": {
+    "id": "search_evidence",
+    "text": "Your search reveals detailed plans for stealing the Hollywood sign, various Golden Gate Bridge components, and even plans to 'borrow' a cable car. You've uncovered a massive conspiracy against California's cultural identity.\n\nThanks to your detective work, law enforcement across the state can now prepare to protect these treasures. The piano is safely returned to Golden Gate Park, where visitors can once again enjoy the beautiful Flower Piano installation.",
+    "choices": [
+      {
+        "text": "Celebrate your victory with the team",
+        "nextNodeId": "victory_celebration"
+      }
+    ]
+  },
+  "victory_taskforce": {
+    "id": "victory_taskforce",
+    "isEnding": true,
+    "text": "🏆 CASE CLOSED 🏆\n\nExcellent detective work! You've not only recovered the stolen piano but uncovered and dismantled a major A.C.E.S. conspiracy against California's cultural treasures. The Golden State Valkyries' detective unit establishes a new task force with you as the lead investigator.\n\nThe Flower Piano installation is restored to Golden Gate Park, and visitors from around the world can once again enjoy the beautiful melodies echoing through the gardens. California's cultural heritage is safe, thanks to your dedication.\n\nYour final score: MASTER DETECTIVE 🕵️‍♀️"
+  },
+  "victory_celebration": {
+    "id": "victory_celebration",
+    "isEnding": true,
+    "text": "🏆 CASE CLOSED 🏆\n\nOutstanding work, Detective Burton! You, Laeticia, and Carla have successfully recovered the stolen piano and prevented A.C.E.S. from carrying out their 'California Silence Project.' The team celebrates with a picnic in Golden Gate Park, where the Flower Piano once again fills the air with beautiful music.\n\nYour quick thinking and thorough investigation saved not just one piano, but potentially dozens of California's most beloved cultural symbols. The Golden State Valkyries' reputation as elite detectives is well-deserved.\n\nYour final score: HERO DETECTIVE 🌟"
+  },
+  "return_piano": {
+    "id": "return_piano",
+    "isEnding": true,
+    "text": "🏆 CASE CLOSED 🏆\n\nMission accomplished! Working together with Laeticia and Carla, you've successfully recovered the stolen piano and returned it safely to the Flower Piano installation in Golden Gate Park. The A.C.E.S. cell has been arrested and their immediate plans thwarted.\n\nAs the piano is carefully restored to its place among the flowers, the first visitor of the day sits down and begins playing 'California Dreamin'' - but this time, it sounds exactly as it should. Your detective work has preserved a piece of California's cultural heart.\n\nYour final score: SUCCESSFUL DETECTIVE 🎹"
+  }
+}

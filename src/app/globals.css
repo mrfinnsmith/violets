@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-violet: var(--theme-color-violet, #a855f7);
+  --color-apple-green: var(--theme-color-apple-green, #00ff41);
+  --color-black: #000000;
+  --color-amber: #ffb000;
+  --color-red: #dc2626;
+  --color-orange: #ea580c;
+  --color-yellow: #ca8a04;
+  --color-lime: #65a30d;
+  --color-green: #16a34a;
+  --color-emerald: #059669;
+  --color-teal: #0d9488;
+  --color-cyan: #0891b2;
+  --color-sky: #0284c7;
+  --color-blue: #2563eb;
+  --color-indigo: #4338ca;
+  --color-purple: #9333ea;
+  --color-fuchsia: #c026d3;
+  --color-pink: #db2777;
+  --color-rose: #e11d48;
+  --color-gray: #6b7280;
+  --color-slate: #64748b;
+  --color-zinc: #71717a;
+  --color-neutral: #737373;
+  --color-stone: #78716c;
+  --color-white: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --text-color: var(--color-violet);
+  --bg-color: var(--color-black);
+  --apple-green: #00ff41;
+  --apple-black: #000000;
+  --apple-amber: #ffb000;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.blinking-cursor::after {
+  content: '█';
+  animation: blink 1s infinite;
+  margin-left: 2px;
+}
+
+::selection {
+  background: var(--text-color);
+  color: var(--bg-color);
 }

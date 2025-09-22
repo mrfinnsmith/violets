@@ -1,0 +1,14 @@
+{
+  "violet": {
+    "name": "Violet",
+    "background": "#2e1065",
+    "foreground": "#a855f7",
+    "accent": "#7c3aed"
+  },
+  "apple": {
+    "name": "Apple II",
+    "background": "#000000",
+    "foreground": "#00ff41",
+    "accent": "#ffb000"
+  }
+}
