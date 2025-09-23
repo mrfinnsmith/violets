@@ -1,27 +1,19 @@
 'use client';
 
 import { useState } from 'react';
+import { useTheme } from '../contexts/ThemeContext';
 
 export default function TopMenu() {
-  const [isAppleTheme, setIsAppleTheme] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const { backgroundTheme, colorTheme, toggleBackgroundTheme, toggleColorTheme } = useTheme();
 
-  const toggleTheme = () => {
-    const root = document.documentElement;
-    
-    if (isAppleTheme) {
-      // Switch to violet theme
-      root.style.setProperty('--text-color', '#a855f7');
-      root.style.setProperty('--theme-color-violet', '#a855f7');
-      root.style.setProperty('--theme-color-apple-green', '#a855f7');
-    } else {
-      // Switch to apple theme
-      root.style.setProperty('--text-color', '#00ff41');
-      root.style.setProperty('--theme-color-violet', '#00ff41');
-      root.style.setProperty('--theme-color-apple-green', '#00ff41');
-    }
-    
-    setIsAppleTheme(!isAppleTheme);
+  const handleToggleBackground = () => {
+    toggleBackgroundTheme();
+    setShowMenu(false);
+  };
+
+  const handleToggleColor = () => {
+    toggleColorTheme();
     setShowMenu(false);
   };
 
@@ -39,12 +31,18 @@ export default function TopMenu() {
             MENU
           </button>
           {showMenu && (
-            <div className="absolute right-0 top-full mt-1 border border-violet bg-black min-w-32">
+            <div className="absolute right-0 top-full mt-1 border border-violet min-w-32" style={{backgroundColor: 'var(--bg-color)'}}>
               <button
-                onClick={toggleTheme}
+                onClick={handleToggleBackground}
                 className="w-full px-3 py-2 text-sm font-mono text-violet hover:bg-violet hover:text-black transition-colors duration-200 text-left"
               >
-                {isAppleTheme ? '> VIOLET' : '> APPLE II'}
+                {backgroundTheme === 'dark' ? '> LIGHT MODE' : '> DARK MODE'}
+              </button>
+              <button
+                onClick={handleToggleColor}
+                className="w-full px-3 py-2 text-sm font-mono text-violet hover:bg-violet hover:text-black transition-colors duration-200 text-left"
+              >
+                {colorTheme === 'violet' ? '> APPLE II' : '> VIOLET'}
               </button>
             </div>
           )}
