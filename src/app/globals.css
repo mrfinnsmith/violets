@@ -59,3 +59,20 @@ body {
   background: var(--text-color);
   color: var(--bg-color);
 }
+
+/* Update existing Tailwind utilities to use unified theme */
+.text-violet { color: var(--theme-color); }
+.border-violet { border-color: var(--theme-color); }
+.bg-violet { background-color: var(--theme-color); }
+.hover\:bg-violet:hover { background-color: var(--theme-color); }
+.hover\:text-black:hover { color: var(--bg-color); }
+
+/* Monochrome terminal-style image rendering */
+.pixelated-image {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  filter: var(--theme-filter);
+  background-color: var(--bg-color);
+  transition: filter 0.3s ease;
+}

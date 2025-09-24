@@ -3,6 +3,8 @@ export interface GameNode {
   text: string;
   choices: Choice[];
   isEnding?: boolean;
+  imageUrl?: string;
+  imageAlt?: string;
 }
 
 export interface Choice {

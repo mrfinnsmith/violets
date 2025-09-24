@@ -42,18 +42,19 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const applyTheme = (bgTheme: BackgroundTheme, colTheme: ColorTheme) => {
     const root = document.documentElement;
     
-    // Set background
-    if (bgTheme === 'dark') {
-      root.style.setProperty('--bg-color', '#000000');
-    } else {
-      root.style.setProperty('--bg-color', '#ffffff');
-    }
+    root.style.setProperty('--bg-color', bgTheme === 'dark' ? '#000000' : '#ffffff');
     
-    // Set colors based on color theme
-    const textColor = colTheme === 'violet' ? '#a855f7' : '#00ff41';
-    root.style.setProperty('--text-color', textColor);
-    root.style.setProperty('--theme-color-violet', textColor);
-    root.style.setProperty('--theme-color-apple-green', textColor);
+    if (colTheme === 'violet') {
+      root.style.setProperty('--theme-color', '#a855f7');
+      root.style.setProperty('--theme-filter', 
+        'brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(286deg) brightness(97%) contrast(96%)'
+      );
+    } else {
+      root.style.setProperty('--theme-color', '#00ff41');
+      root.style.setProperty('--theme-filter',
+        'brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(2000%) hue-rotate(80deg) brightness(120%)'
+      );
+    }
   };
 
   const toggleBackgroundTheme = () => {
