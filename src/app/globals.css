@@ -36,12 +36,28 @@
   --apple-amber: #ffb000;
 }
 
+/* Apple IIe authentic bitmap font styles */
+@font-face {
+  font-family: 'AppleII';
+  src: url('https://www.cufonfonts.com/downloads/apple-ii-screen-typeface') format('truetype');
+  font-display: block;
+}
+
 body {
   background: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Courier New', monospace;
+  font-family: 'AppleII', 'Perfect DOS VGA 437', 'Px437 Apple II', 'Consolas', 'Courier New', monospace;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  font-weight: normal;
+  text-rendering: pixelated;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  image-rendering: pixelated;
+  font-variant-ligatures: none;
+  font-feature-settings: 'liga' 0;
+  font-stretch: condensed;
 }
 
 @keyframes blink {
@@ -67,12 +83,14 @@ body {
 .hover\:bg-violet:hover { background-color: var(--theme-color); }
 .hover\:text-black:hover { color: var(--bg-color); }
 
-/* Monochrome terminal-style image rendering */
+/* Apple IIe low-resolution pixelated image rendering */
 .pixelated-image {
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
-  filter: var(--theme-filter);
+  filter: var(--theme-filter) contrast(2) brightness(1.2);
   background-color: var(--bg-color);
-  transition: filter 0.3s ease;
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
 }
