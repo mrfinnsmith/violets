@@ -6,6 +6,7 @@ import { saveGameState, loadGameState, clearGameState, hasExistingGame } from '@
 import { initAnalytics, trackChoice, trackNodeVisit, trackGameComplete } from '@/lib/analytics';
 import ChoiceButton from './ChoiceButton';
 import TopMenu from './TopMenu';
+import AppleIIeImageProcessor from './AppleIIeImageProcessor';
 import storyData from '@/data/story.json';
 
 interface GameAction {
@@ -195,14 +196,33 @@ export default function GameDisplay() {
 
           <div className="p-6">
             <div className="border border-violet p-4 mb-6">
-              <div className="text-violet">
-                {currentNode.text.split('\n\n').map((paragraph, index) => (
-                  <div key={index} className="mb-4 last:mb-0">
-                    {paragraph}
+              {currentNode.imageUrl && (
+                <div className="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-4">
+                  <AppleIIeImageProcessor
+                    src={currentNode.imageUrl}
+                    alt={currentNode.imageAlt || "Scene illustration"}
+                    className="border border-violet"
+                  />
+                  <div className="text-violet">
+                    {currentNode.text.split('\n\n').map((paragraph, index) => (
+                      <div key={index} className="mb-4 last:mb-0">
+                        {paragraph}
+                      </div>
+                    ))}
+                    <span className="blinking-cursor"></span>
                   </div>
-                ))}
-                <span className="blinking-cursor"></span>
-              </div>
+                </div>
+              )}
+              {!currentNode.imageUrl && (
+                <div className="text-violet">
+                  {currentNode.text.split('\n\n').map((paragraph, index) => (
+                    <div key={index} className="mb-4 last:mb-0">
+                      {paragraph}
+                    </div>
+                  ))}
+                  <span className="blinking-cursor"></span>
+                </div>
+              )}
             </div>
 
             {currentNode.isEnding ? (

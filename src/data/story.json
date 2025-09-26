@@ -2,6 +2,8 @@
   "start": {
     "id": "start",
     "text": "The morning fog rolls across Golden Gate Park as you arrive at the Flower Piano installation. As a member of the Golden State Valkyries' secret detective unit, you've been called to investigate a shocking crime: someone has stolen the grand piano from the center of the flower garden!\n\nYou are Detective Veronica Burton, and your partners Detective Laeticia Amihere and Detective Carla Leite are already examining the scene. The A.C.E.S. (Anti-California Evil Society) has left their calling card - a black envelope with their twisted logo.",
+    "imageUrl": "/test-image2.jpg",
+    "imageAlt": "Empty piano platform in Golden Gate Park with fog rolling through the gardens",
     "choices": [
       {
         "text": "Examine the crime scene for clues",
