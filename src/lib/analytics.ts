@@ -3,7 +3,7 @@ import mixpanel from 'mixpanel-browser';
 
 const MIXPANEL_TOKEN = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN;
 // const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
-// const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+// const SUPABASE_PUBLISHABLE_KEY = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 
 let mixpanelInitialized = false;
 // let supabase: ReturnType<typeof createClient> | null = null;
@@ -21,8 +21,8 @@ export const initAnalytics = () => {
   }
 
   // Supabase integration disabled for now
-  // if (SUPABASE_URL && SUPABASE_ANON_KEY && !supabase) {
-  //   supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  // if (SUPABASE_URL && SUPABASE_PUBLISHABLE_KEY && !supabase) {
+  //   supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
   // }
 };
 
